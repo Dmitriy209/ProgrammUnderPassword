@@ -21,6 +21,7 @@ namespace ProgrammUnderPassword
                         $"{protectInformation}");
                     break;
                 }
+
                 Console.WriteLine("Вы ввели неправильный пароль,\n" +
                     "У вас осталось " + (triesCount - (i + 1)) + " попыток");
             }
