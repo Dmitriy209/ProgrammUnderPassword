@@ -18,19 +18,15 @@ namespace ProgrammUnderPassword
             for (int i = 0; i < triesCount; i++)
             {
                 Console.WriteLine("Введите пароль:");
-                string userInput = Console.ReadLine();
 
-                if (userInput == password)
+                if (Console.ReadLine() == password)
                 {
                     Console.WriteLine($"Пароль принят.\n" +
                         $"{protectInformation}");
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("Вы ввели неправильный пароль,\n" +
-                        "У вас осталось " + (triesCount - (i + 1)) + " попыток");
-                }
+                Console.WriteLine("Вы ввели неправильный пароль,\n" +
+                    "У вас осталось " + (triesCount - (i + 1)) + " попыток");
             }
         }
     }
